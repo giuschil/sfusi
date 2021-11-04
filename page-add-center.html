@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<title>Listeo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/main-color.css" id="colors">
+
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header Container
+================================================== -->
+<header id="header-container" class="fixed fullwidth">
+		
+	<!-- Header -->
+	<div id="header">
+
+		<div class="container">
+
+			<!-- Left Side Content -->
+			<div class="left-side">
+
+				<!-- Logo -->
+				<div id="logo">
+					<a href="/"><img src="/images/logo.png" data-sticky-logo="/images/logo.png" alt="Beach Functional Training"></a>
+				</div>
+
+				<!-- Mobile Navigation -->
+				<div class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+
+				<!-- Main Navigation -->
+				<nav id="navigation" class="style-1">
+					<!-- Main Menu -->
+					<ul id="responsive">
+
+<li>
+	<a href="#">Centros</a>
+	<ul>
+		<li>
+			<a href="#">Valencia</a>
+			<ul>
+				<li><a href="/s">Playa Malvarrosa</a></li>
+				<li><a href="/s">La Marina/Puerto</a></li>
+				<li><a href="/s">Zona Universitaria</a></li>
+								</ul>
+		</li>
+				</ul>
+</li>
+
+<li>
+	<a href="/metodologia">Metodología BFT</a>
+</li>
+
+<li>
+	<a href="/precios">Precios</a>
+</li>
+
+</ul>
+					<!-- Main Menu / End -->
+				</nav>
+				<div class="clearfix"></div>
+				<!-- Main Navigation / End -->
+
+			</div>
+			<!-- Left Side Content / End -->
+
+
+			<!-- Right Side Content / End -->
+			<div class="right-side">
+				<div class="header-widget">
+					<!-- User Menu -->
+											<!-- User Menu / End -->
+				</div>
+			</div>
+			<!-- Right Side Content / End -->
+
+			<!-- Sign In Popup -->
+			<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
+
+<div class="small-dialog-header">
+	<h3>Sign In</h3>
+</div>
+
+<!--Tabs -->
+<div class="sign-in-form style-1">
+
+	<ul class="tabs-nav">
+		<li class="active">
+			<a href="#tab1">Log In</a>
+		</li>
+		<li>
+			<a href="#tab2">Register</a>
+		</li>
+	</ul>
+
+	<div class="tabs-container alt">
+
+		<!-- Login -->
+		<div class="tab-content" id="tab1" style="">
+			<form class="login" action="/login-check" method="post">
+
+	
+<input type="hidden" name="_csrf_token" value="XCG9JZrZ4Gv4J-TBzsHWIUR3CQw1sVdA9ew0BgejXqk">
+
+<p class="form-row form-row-wide">
+	<label for="username">Username:
+		<i class="im im-icon-Male"></i>
+					<input class="input-text" placeholder="username" type="text" id="username" name="_username" value="" required="required" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+	</label>
+</p>
+
+<p class="form-row form-row-wide">
+	<label for="password">Password:
+		<i class="im im-icon-Lock-2"></i>
+					<input class="input-text" placeholder="password" type="password" id="password" name="_password" required="required" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+	</label>
+	<span class="lost_password">
+		<a href="#">Lost Your Password?</a>
+	</span>
+</p>
+
+<div class="form-row">
+	<input type="submit" class="button border margin-top-5" name="login" value="Login">
+	<div class="checkboxes margin-top-10">
+					<input type="checkbox" id="remember_me" name="_remember_me" value="on">
+		<label for="remember-me">Remember Me</label>
+	</div>
+</div>
+
+</form>
+
+
+						</div>
+
+		<!-- Register -->
+		<div class="tab-content" id="tab2" style="display: none;">
+
+			<form method="post" class="register">
+
+				<p class="form-row form-row-wide">
+					<label for="username2">Username:
+						<i class="im im-icon-Male"></i>
+						<input type="text" class="input-text" name="username" id="username2" value="">
+					</label>
+				</p>
+
+				<p class="form-row form-row-wide">
+					<label for="email2">Email Address:
+						<i class="im im-icon-Mail"></i>
+						<input type="text" class="input-text" name="email" id="email2" value="">
+					</label>
+				</p>
+
+				<p class="form-row form-row-wide">
+					<label for="password1">Password:
+						<i class="im im-icon-Lock-2"></i>
+						<input class="input-text" type="password" name="password1" id="password1">
+					</label>
+				</p>
+
+				<p class="form-row form-row-wide">
+					<label for="password2">Repeat Password:
+						<i class="im im-icon-Lock-2"></i>
+						<input class="input-text" type="password" name="password2" id="password2">
+					</label>
+				</p>
+
+				<input type="submit" class="button border fw margin-top-10" name="register" value="Register">
+
+			</form>
+		</div>
+
+	</div>
+</div>
+</div>				<!-- Sign In Popup / End -->
+
+		</div>
+	</div><div id="header" class="cloned sticky">
+
+		<div class="container">
+
+			<!-- Left Side Content -->
+			<div class="left-side">
+
+				<!-- Logo -->
+				<div id="logo">
+					<a href="/"><img src="/images/logo.png" data-sticky-logo="/images/logo.png" alt="Beach Functional Training"></a>
+				</div>
+
+				<!-- Mobile Navigation -->
+				<div class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+
+				<!-- Main Navigation -->
+				<nav id="navigation" class="style-1">
+					<!-- Main Menu -->
+					<ul id="responsive">
+
+<li>
+	<a href="#">Centros</a>
+	<ul>
+		<li>
+			<a href="#">Valencia</a>
+			<ul>
+				<li><a href="/s">Playa Malvarrosa</a></li>
+				<li><a href="/s">La Marina/Puerto</a></li>
+				<li><a href="/s">Zona Universitaria</a></li>
+								</ul>
+		</li>
+				</ul>
+</li>
+
+<li>
+	<a href="/metodologia">Metodología BFT</a>
+</li>
+
+<li>
+	<a href="/precios">Precios</a>
+</li>
+
+</ul>
+					<!-- Main Menu / End -->
+				</nav>
+				<div class="clearfix"></div>
+				<!-- Main Navigation / End -->
+
+			</div>
+			<!-- Left Side Content / End -->
+
+
+			<!-- Right Side Content / End -->
+			<div class="right-side">
+				<div class="header-widget">
+					<!-- User Menu -->
+											<!-- User Menu / End -->
+				</div>
+			</div>
+			<!-- Right Side Content / End -->
+
+			<!-- Sign In Popup -->
+							<!-- Sign In Popup / End -->
+
+		</div>
+	</div>
+	<!-- Header / End -->
+
+</header><div class="clearfix"></div>
+<!-- Header Container / End -->
+
+
+<!-- Titlebar
+================================================== -->
+<div id="titlebar" class="gradient">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 margin-top-60">
+
+				<h2><i class="sl sl-icon-plus"></i> Añadir centro</h2>
+
+				<!-- Breadcrumbs -->
+				<nav id="breadcrumbs">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>Añadir centro</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
+
+
+<!-- Container -->
+<div class="container">
+
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="notification notice large margin-bottom-55">
+					<h4>¿No tienes cuenta creada? 🙂</h4>
+					<p>Si no tienes una cuenta. Puedes crear una indicando tú email en el apartado de datos de contacto. La constraseña de acceso, se te enviará automáticamente al email indicado.</p>
+				</div>
+
+				<div id="add-listing" class="separated-form">
+
+					<!-- Section -->
+					<div class="add-listing-section">
+
+						<!-- Headline -->
+						<div class="add-listing-headline">
+							<h3><i class="sl sl-icon-doc"></i>  Datos básicos</h3>
+						</div>
+
+						<!-- Title -->
+						<div class="row with-forms">
+							<div class="col-md-12">
+								<h5>Sitio </h5>
+								<input class="search-field" type="text" value=""/>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="row with-forms">
+
+							<!-- Status -->
+							<div class="col-md-6">
+								<h5>Categoria</h5>
+								<select class="chosen-select-no-single" >
+									<option label="blank">Selecciona la Categoria</option>	
+									<option>Indoor</option>
+									<option>Outdoor</option>
+									<option>Beach</option>
+								</select>
+							</div>
+
+							<!-- Type -->
+							<div class="col-md-6">
+								<h5>Activities</h5>
+								<select class="chosen-select-no-single" >
+									<option label="blank">Selecciona la Actividad</option>	
+									<option>Move/Boxing</option>
+									<option></option>
+									<option>Calisthenics</option>
+								</select>
+							</div>
+
+						</div>
+						<!-- Row / End -->
+
+					</div>
+					<!-- Section / End -->
+
+					<!-- Section -->
+					<div class="add-listing-section margin-top-45">
+
+						<!-- Headline -->
+						<div class="add-listing-headline">
+							<h3><i class="sl sl-icon-location"></i> Localización</h3>
+						</div>
+
+						<div class="submit-section">
+
+							<!-- Row -->
+							<div class="row with-forms">
+
+								<!-- City -->
+								<div class="col-md-6">
+									<h5>Ciudad</h5>
+									<input type="text" placeholder="e.g. Valencia">
+
+								</div>
+
+								<!-- Address -->
+								<div class="col-md-6">
+									<h5>Dirección</h5>
+									<input type="text" placeholder="e.g. Gran Via">
+								</div>
+
+								<!-- City -->
+								<div class="col-md-6">
+									<h5>País</h5>
+									<input type="text" placeholder="e.g. Spain">
+								</div>
+
+								<!-- Zip-Code -->
+								<div class="col-md-6">
+									<h5>Código postal</h5>
+									<input type="text">
+								</div>
+
+							</div>
+							<!-- Row / End -->
+
+						</div>
+					</div>
+					<!-- Section / End -->
+
+
+					<!-- Section -->
+					<div class="add-listing-section margin-top-45">
+
+						<!-- Headline -->
+						<div class="add-listing-headline">
+							<h3><i class="sl sl-icon-picture"></i> Galería</h3>
+						</div>
+
+						<!-- Dropzone -->
+						<div class="submit-section">
+							<form action="/file-upload" class="dropzone" ></form>
+						</div>
+
+					</div>
+					<!-- Section / End -->
+
+
+					<!-- Section -->
+					<div class="add-listing-section margin-top-45">
+
+						<!-- Headline -->
+						<div class="add-listing-headline">
+							<h3><i class="sl sl-icon-docs"></i> Información</h3>
+						</div>
+
+						<!-- Description -->
+						<div class="form">
+							<h5>Descripción</h5>
+							<textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
+						</div>
+
+						<!-- Row -->
+						<div class="row with-forms">
+
+							<!-- Teléfono -->
+							<div class="col-md-4">
+								<h5>Teléfono <span>(Opcional)</span></h5>
+								<input type="text">
+							</div>
+
+							<!-- Website -->
+							<div class="col-md-4">
+								<h5>Sitio Web<span>(Opcional)</span></h5>
+								<input type="text">
+							</div>
+
+							<!-- correo electrónico  -->
+							<div class="col-md-4">
+								<h5>Correo Electrónico <span>(Opcional)</span></h5>
+								<input type="text">
+							</div>
+
+						</div>
+						<!-- Row / End -->
+
+
+						<!-- Row -->
+						<div class="row with-forms">
+
+							<!-- Phone -->
+							<div class="col-md-4">
+								<h5 class="fb-input"><i class="fa fa-facebook-square"></i> Facebook <span>(Opcional)</span></h5>
+								<input type="text" placeholder="https://www.facebook.com/">
+							</div>
+
+							<!-- Website -->
+							<div class="col-md-4">
+								<h5 class="twitter-input"><i class="fa fa-twitter"></i> Twitter <span>(Opcional)</span></h5>
+								<input type="text" placeholder="https://www.twitter.com/">
+							</div>
+
+							<!-- correo electrónico Address -->
+							<div class="col-md-4">
+								<h5 class="gplus-input"><i class="fa fa-google-plus"></i> Google Plus <span>(Opcional)</span></h5>
+								<input type="text" placeholder="https://plus.google.com">
+							</div>
+
+						</div>
+						<!-- Row / End -->
+
+
+						<!-- Checkboxes -->
+						<h5 class="margin-top-30 margin-bottom-10">Equipamiento <span>(Opcional)</span></h5>
+						<div class="checkboxes in-row margin-bottom-20">
+					
+							<input id="check-a" type="checkbox" name="check">
+							<label for="check-a">Duchas</label>
+
+							<input id="check-b" type="checkbox" name="check">
+							<label for="check-b">Aseos</label>
+
+							<input id="check-c" type="checkbox" name="check">
+							<label for="check-c">Vestuarios</label>
+
+							<input id="check-d" type="checkbox" name="check">
+							<label for="check-d">Recepción</label>
+
+							<input id="check-e" type="checkbox" name="check" >
+							<label for="check-e">Cafetería</label>
+
+							<input id="check-f" type="checkbox" name="check" >
+							<label for="check-f">Zona de descanso</label>
+
+							<input id="check-g" type="checkbox" name="check">
+							<label for="check-g">Fácil acceso</label>	
+
+							<input id="check-h" type="checkbox" name="check">
+							<label for="check-h">Parking automóviles</label>
+							
+							<input id="check-h" type="checkbox" name="check">
+							<label for="check-h">Parking bicicletas</label>
+					
+						</div>
+						<!-- Checkboxes / End -->
+
+					</div>
+					<!-- Section / End -->
+
+
+					<!-- Section -->
+					<div class="add-listing-section margin-top-45">
+						
+						<!-- Headline -->
+						<div class="add-listing-headline">
+							<h3><i class="sl sl-icon-clock"></i> Horario</h3>
+							<!-- Switcher -->
+							<label class="switch"><input type="checkbox" checked><span class="slider round"></span></label>
+						</div>
+						
+						<!-- Switcher ON-OFF Content -->
+						<div class="switcher-content">
+
+							<!-- Day -->
+							<div class="row opening-day">
+								<div class="col-md-2"><h5>Lunes</h5></div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de inicio">
+										<option label="Hora de inicio"></option>
+										<option>Closed</option>
+										<option>1 AM</option>
+										<option>2 AM</option>
+										<option>3 AM</option>
+										<option>4 AM</option>
+										<option>5 AM</option>
+										<option>6 AM</option>
+										<option>7 AM</option>
+										<option>8 AM</option>
+										<option>9 AM</option>
+										<option>10 AM</option>
+										<option>11 AM</option>
+										<option>12 AM</option>	
+										<option>1 PM</option>
+										<option>2 PM</option>
+										<option>3 PM</option>
+										<option>4 PM</option>
+										<option>5 PM</option>
+										<option>6 PM</option>
+										<option>7 PM</option>
+										<option>8 PM</option>
+										<option>9 PM</option>
+										<option>10 PM</option>
+										<option>11 PM</option>
+										<option>12 PM</option>
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de finalización">
+										<option label="Hora de finalización"></option>
+										<option>Closed</option>
+										<option>1 AM</option>
+										<option>2 AM</option>
+										<option>3 AM</option>
+										<option>4 AM</option>
+										<option>5 AM</option>
+										<option>6 AM</option>
+										<option>7 AM</option>
+										<option>8 AM</option>
+										<option>9 AM</option>
+										<option>10 AM</option>
+										<option>11 AM</option>
+										<option>12 AM</option>	
+										<option>1 PM</option>
+										<option>2 PM</option>
+										<option>3 PM</option>
+										<option>4 PM</option>
+										<option>5 PM</option>
+										<option>6 PM</option>
+										<option>7 PM</option>
+										<option>8 PM</option>
+										<option>9 PM</option>
+										<option>10 PM</option>
+										<option>11 PM</option>
+										<option>12 PM</option>
+									</select>
+								</div>
+							</div>
+							<!-- Day / End -->
+
+							<!-- Day -->
+							<div class="row opening-day js-demo-hours">
+								<div class="col-md-2"><h5>Martes</h5></div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de inicio">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de finalización">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+							</div>
+							<!-- Day / End -->
+
+							<!-- Day -->
+							<div class="row opening-day js-demo-hours">
+								<div class="col-md-2"><h5>Miércoles</h5></div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de inicio">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de finalización">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+							</div>
+							<!-- Day / End -->
+
+							<!-- Day -->
+							<div class="row opening-day js-demo-hours">
+								<div class="col-md-2"><h5>Jueves</h5></div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de inicio">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de finalización">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+							</div>
+							<!-- Day / End -->
+
+							<!-- Day -->
+							<div class="row opening-day js-demo-hours">
+								<div class="col-md-2"><h5>Viernes</h5></div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de inicio">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de finalización">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+							</div>
+							<!-- Day / End -->
+
+							<!-- Day -->
+							<div class="row opening-day js-demo-hours">
+								<div class="col-md-2"><h5>Sábado</h5></div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de inicio">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de finalización">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+							</div>
+							<!-- Day / End -->
+
+							<!-- Day -->
+							<div class="row opening-day js-demo-hours">
+								<div class="col-md-2"><h5>Domingo</h5></div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de inicio">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="chosen-select" data-placeholder="Hora de finalización">
+										<!-- Hours added via JS (this is only for demo purpose) -->
+									</select>
+								</div>
+							</div>
+							<!-- Day / End -->
+
+						</div>
+						<!-- Switcher ON-OFF Content / End -->
+
+					</div>
+					<!-- Section / End -->
+
+
+					<!-- Section -->
+					<div class="add-listing-section margin-top-45">
+						
+						<!-- Headline -->
+						<div class="add-listing-headline">
+							<h3><i class="sl sl-icon-book-open"></i> Precios</h3>
+							<!-- Switcher -->
+							<label class="switch"><input type="checkbox" checked><span class="slider round"></span></label>
+						</div>
+
+						<!-- Switcher ON-OFF Content -->
+						<div class="switcher-content">
+
+							<div class="row">
+								<div class="col-md-12">
+									<table id="pricing-list-container">
+										<tr class="pricing-list-item pattern">
+											<td>
+												<div class="fm-move"><i class="sl sl-icon-cursor-move"></i></div>
+												<div class="fm-input pricing-name"><input type="text" placeholder="Título" /></div>
+												<div class="fm-input pricing-ingredients"><input type="text" placeholder="Descripción" /></div>
+												<div class="fm-input pricing-price"><input type="text" placeholder="Precio" data-unit="EUR" /></div>
+												<div class="fm-close"><a class="delete" href="#"><i class="fa fa-remove"></i></a></div>
+											</td>
+										</tr>
+									</table>
+									<a href="#" class="button add-pricing-list-item">Añadir artículo</a>
+									<a href="#" class="button add-pricing-submenu"> Añadir categoria</a>
+								</div>
+							</div>
+
+						</div>
+						<!-- Switcher ON-OFF Content / End -->
+
+					</div>
+					<!-- Section / End -->
+
+
+					<a href="#" class="button preview">Guardar <i class="fa fa-arrow-circle-right"></i></a>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Content / End -->
+<!-- Container / End -->
+
+
+
+<!-- Footer
+================================================== -->
+<div id="footer" class="dark">
+
+	<!-- Main -->
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-6">
+<img class="footer-logo" src="/images/logo.png" alt="bft">
+<br><br>
+<p>El entrenamiento sobre arena conlleva un mayor consumo de energía y un menor impacto durante las sesiones de entrenamiento frente a aquellas que se realizan en superficies firmes.</p>
+</div>
+
+<div class="col-md-3 col-sm-6">
+<h4>BFT
+</h4>
+<ul class="footer-links">
+<li>
+	<a href="https://bodyla.com/grupos/9633-BFTLIFE#events">Comienza</a>
+</li>
+<li>
+	<a href="/precios">Precios</a>
+</li>
+<li>
+	<a href="/metodologia">Metodologia BFT</a>
+</li>
+</ul>
+</div>
+
+<div class="col-md-3 col-sm-6">
+<h4>Tu gimansio en arena
+</h4>
+<ul class="footer-links">
+<li>
+	<a href="https://bodyla.com/grupos/9633-BFTLIFE#events">Entrenamiento Valencia Playa</a>
+</li>
+<li>
+	<a href="https://bodyla.com/grupos/9633-BFTLIFE#events">Entrenamiento Valencia Puerto</a>
+</li>
+<li>
+	<a href="https://bodyla.com/grupos/9633-BFTLIFE#events">Entrenamiento Valencia Calisthenics</a>
+</li>
+</ul>
+</div>
+
+
+<div class="col-md-2 col-sm-6">
+<h4>Contáctanos</h4>
+
+<ul class="social-icons margin-top-20">
+<li>
+	<a class="facebook" href="https://www.facebook.com/beachfunctionaltraininges/">
+		<i class="icon-facebook"></i>
+	</a>
+</li>
+<li>
+	<a class="instagram" href="https://www.instagram.com/bft_life/">
+		<i class="icon-instagram"></i>
+	</a>
+</li>
+			</ul>
+
+</div>
+
+</div>
+
+<!-- Copyright -->
+<div class="row">
+<div class="col-md-12">
+<div class="copyrights">© 2020 BFT.life |	 All Rights Reserved.</div>
+</div>
+</div>
+
+</div>
+
+
+</div><!-- Footer / End -->
+
+
+<!-- Back To Top Button -->
+<div id="backtotop"><a href="#"></a></div>
+
+
+</div>
+<!-- Wrapper / End -->
+
+
+
+<!-- Scripts
+================================================== -->
+<script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-migrate-3.1.0.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/chosen.min.js"></script>
+<script type="text/javascript" src="scripts/slick.min.js"></script>
+<script type="text/javascript" src="scripts/rangeslider.min.js"></script>
+<script type="text/javascript" src="scripts/magnific-popup.min.js"></script>
+<script type="text/javascript" src="scripts/waypoints.min.js"></script>
+<script type="text/javascript" src="scripts/counterup.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/tooltips.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+
+
+<!-- Leaflet Maps Scripts -->
+<script src="scripts/leaflet-markercluster.min.js"></script>
+<script src="scripts/leaflet-gesture-handling.min.js"></script>
+<script src="scripts/leaflet-listeo.js"></script>
+
+
+<!-- Leaflet Geocoder + Search Autocomplete // Docs: https://github.com/perliedman/leaflet-control-geocoder -->
+<script src="scripts/leaflet-autocomplete.js"></script>
+<script src="scripts/leaflet-control-geocoder.js"></script>
+
+
+<!-- Opening hours added via JS (this is only for demo purpose) -->
+<script>
+$(".opening-day.js-demo-hours .chosen-select").each(function() {
+	$(this).append(''+
+        '<option></option>'+
+        '<option>Closed</option>'+
+        '<option>1 AM</option>'+
+        '<option>2 AM</option>'+
+        '<option>3 AM</option>'+
+        '<option>4 AM</option>'+
+        '<option>5 AM</option>'+
+        '<option>6 AM</option>'+
+        '<option>7 AM</option>'+
+        '<option>8 AM</option>'+
+        '<option>9 AM</option>'+
+        '<option>10 AM</option>'+
+        '<option>11 AM</option>'+
+        '<option>12 AM</option>'+
+        '<option>1 PM</option>'+
+        '<option>2 PM</option>'+
+        '<option>3 PM</option>'+
+        '<option>4 PM</option>'+
+        '<option>5 PM</option>'+
+        '<option>6 PM</option>'+
+        '<option>7 PM</option>'+
+        '<option>8 PM</option>'+
+        '<option>9 PM</option>'+
+        '<option>10 PM</option>'+
+        '<option>11 PM</option>'+
+        '<option>12 PM</option>');
+});
+</script>
+
+<!-- DropZone | Documentation: http://dropzonejs.com -->
+<script type="text/javascript" src="scripts/dropzone.js"></script>
+
+
+<!-- Style Switcher
+================================================== -->
+<script src="scripts/switcher.js"></script>
+
+<div id="style-switcher">
+	<h2>Color Switcher <a href="#"><i class="sl sl-icon-settings"></i></a></h2>
+	
+	<div>
+		<ul class="colors" id="color1">
+			<li><a href="#" class="main" title="Main"></a></li>
+			<li><a href="#" class="blue" title="Blue"></a></li>
+			<li><a href="#" class="green" title="Green"></a></li>
+			<li><a href="#" class="orange" title="Orange"></a></li>
+			<li><a href="#" class="navy" title="Navy"></a></li>
+			<li><a href="#" class="yellow" title="Yellow"></a></li>
+			<li><a href="#" class="peach" title="Peach"></a></li>
+			<li><a href="#" class="beige" title="Beige"></a></li>
+			<li><a href="#" class="purple" title="Purple"></a></li>
+			<li><a href="#" class="celadon" title="Celadon"></a></li>
+			<li><a href="#" class="red" title="Red"></a></li>
+			<li><a href="#" class="brown" title="Brown"></a></li>
+			<li><a href="#" class="cherry" title="Cherry"></a></li>
+			<li><a href="#" class="cyan" title="Cyan"></a></li>
+			<li><a href="#" class="gray" title="Gray"></a></li>
+			<li><a href="#" class="olive" title="Olive"></a></li>
+		</ul>
+	</div>
+		
+</div>
+<!-- Style Switcher / End -->
+
+
+</body>
+</html>
