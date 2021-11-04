@@ -87,6 +87,7 @@
 @import url("plugins/revolutionslider.css");		/* Revolution Slider Style Sheets */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 
 
 
@@ -1938,7 +1939,7 @@ body .typed-cursor.typed-cursor--blink.typed-fade-out{
 	height: 100%;
 	width: 100%;
 	display: block;
-	background: linear-gradient(to right, rgba(255,255,255,0.99) 20%, rgba(255,255,255,0.7) 70%, rgba(255,255,255,0) 95%);
+	background: linear-gradient(to right, rgba(0,0,0,0.48) 100%, rgba(255,255,255,0.7) 70%, rgba(255,255,255,0) 95%);
 }
 
 .main-search-container h2 {
@@ -4075,7 +4076,7 @@ button.fs-map-btn.button {
 }
 
 .code-button:hover {
-	background-color: #f94c3c;
+	background-color: #006e62;
 	color: #fff;
 }
 
@@ -8155,7 +8156,7 @@ a.button {
 	background-color: #66676b;
 	top: 0;
 	padding: 9px 20px;
-	color: #fff;
+	color: #006E62;
 	position: relative;
 	font-size: 15px;
 	font-weight: 600;
@@ -9605,7 +9606,7 @@ body .notification strong { border: none; }
 	line-height: 34px;
 }
 
-.text-content h2 { margin-bottom: 30px; line-height: 46px; font-size: 36px; font-weight: 500; }
+.text-content h2 { margin-bottom: 30px;line-height: 46px; font-size: 36px; font-weight: 500; }
 
 .top-1 { position: relative; top: -1px; }
 .top-0 { position: relative; }
@@ -13906,8 +13907,8 @@ body #submit_map {
 
 .leaflet-control-zoom-in:hover,
 .leaflet-control-zoom-out:hover {
-    background-color: #f94c3c;
-    -webkit-text-stroke: 1px #f94c3c;
+    background-color: #006e62;
+    -webkit-text-stroke: 1px #006e62;
     color: #fff;
 }
 
@@ -14066,8 +14067,8 @@ body #submit_map {
 	
 .leaflet-container a.leaflet-popup-close-button:hover {
 	color: #fff;
-	background-color: #f94c3c;
-	-webkit-text-stroke: 1px #f94c3c;
+	background-color: #006e62;
+	-webkit-text-stroke: 1px #006e62;
 }
 
 .leaflet-container a.leaflet-popup-close-button:before {
@@ -14247,13 +14248,13 @@ body #submit_map {
 .marker-cluster-small div,
 .marker-cluster-medium div,
 .marker-cluster-large div {
-	background-color: #f94c3c;
+	background-color: #006e62;
 }
 
 .marker-cluster div:before {
-	border: 7px solid #f94c3c;
+	border: 7px solid #006e62;
 	opacity: 0.2;
-	box-shadow: inset 0 0 0 4px #f94c3c;
+	box-shadow: inset 0 0 0 4px #006e62;
 	content: '';
 	position:absolute;
 	border-radius: 50%;
@@ -17035,6 +17036,7 @@ body .category-box-btn:hover {
 
 	h1.white, h2.white, h3.white, h4.white, h5.white, h6.white {
 	  color: #fff;
+	  text-align: center;
 	}
 
 	h3.headline {
@@ -18140,7 +18142,7 @@ body .category-box-btn:hover {
 	    line-height: 32px;
 	}
 
-	.main-search-container:before { background: rgba(255,255,255,0.92); }
+	.main-search-container:before { }
 
 }
 
