@@ -195,28 +195,28 @@
 					<div class="main-search-input">
 
 						<div class="main-search-input-item">
-							<input type="text" placeholder="What are you looking for?" value=""/>
+						<input type="text" placeholder="Cosa stai cercando?" value=""/>
 						</div>
 
 						<div class="main-search-input-item location">
 							<div id="autocomplete-container">
-								<input id="autocomplete-input" type="text" placeholder="Location">
+								<input id="autocomplete-input" type="text" placeholder="Luogo">
 							</div>
 							<a href="#"><i class="fa fa-map-marker"></i></a>
 						</div>
 
 						<div class="main-search-input-item">
-							<select data-placeholder="All Categories" class="chosen-select" >
-								<option>All Categories</option>	
-								<option>Shops</option>
-								<option>Hotels</option>
-								<option>Restaurants</option>
-								<option>Fitness</option>
-								<option>Events</option>
+							<select data-placeholder="Tutte le categorie" class="chosen-select" >
+								<option>Tutte le categorie</option>	
+								<option>Alimenti</option>
+								<option>Animali</option>
+								<option>Erboristeria</option>
+								<option>Per la casa</option>
+								<option>Cosmetici</option>
 							</select>
 						</div>
 
-						<button class="button" onclick="window.location.href='listings-half-screen-map-list.html'">Search</button>
+						<button class="button" onclick="window.location.href='listings-half-screen-map-list.html'">Cerca</button>
 
 					</div>
 				</div>
@@ -316,7 +316,118 @@
 </div>
 <!-- Categories Carousel / End -->
 
-
+<section class="fullwidth margin-top-65 padding-top-75 padding-bottom-70" data-background-color="#f8f8f8">
+	<div class="container">
+		<div class="row">
+	
+			<div class="col-md-12">
+				<h3 class="headline centered margin-bottom-45">
+					Negozi più cercati 
+					<span>Scopri i negozi sfusi piu vicini a te</span>
+				</h3>
+			</div>
+	
+			<div class="col-md-12">
+				<div class="simple-slick-carousel dots-nav">
+	
+				<!-- Listing Item -->
+				<div class="carousel-item">
+					<a href="listings-single-page.html" class="listing-item-container">
+						<div class="listing-item">
+							<img src="images/foto-negozio1.jpg" alt="">
+	
+							<div class="listing-badge now-open">Now Open</div>
+							
+							<div class="listing-item-content">
+								<span class="tag">Alimenti</span>
+								<h3>Tom's Restaurant <i class="verified-icon"></i></h3>
+								<span>Via Principi, Roma</span>
+							</div>
+							<span class="like-icon"></span>
+						</div>
+						<div class="star-rating" data-rating="3.5">
+							<div class="rating-counter">(12 reviews)</div>
+						</div>
+					</a>
+				</div>
+				<!-- Listing Item / End -->
+	
+				<!-- Listing Item -->
+				<div class="carousel-item">
+					<a href="listings-single-page.html" class="listing-item-container">
+						<div class="listing-item">
+							<img src="images/foto-negozio2.jpeg" alt="">
+							<div class="listing-item-details">
+								<ul>
+									<li>Friday, August 10</li>
+								</ul>
+							</div>
+							<div class="listing-item-content">
+								<span class="tag">Alimenti</span>
+								<h3>Sticky Band</h3>
+								<span>Via Canarde, Roma</span>
+							</div>
+							<span class="like-icon"></span>
+						</div>
+						<div class="star-rating" data-rating="5.0">
+							<div class="rating-counter">(23 reviews)</div>
+						</div>
+					</a>
+				</div>
+				<!-- Listing Item / End -->		
+	
+				<!-- Listing Item -->
+				<div class="carousel-item">
+					<a href="listings-single-page.html" class="listing-item-container">
+						<div class="listing-item">
+							<img src="images/foto-negozio3.jpg" alt="">
+							<div class="listing-item-details">
+								<ul>
+									<li>Prodotti in offerta</li>
+								</ul>
+							</div>
+							<div class="listing-item-content">
+								<span class="tag">Erboristeria</span>
+								<h3>Da Mary</h3>
+								<span>Viale Giordano Bruno, Roma</span>
+							</div>
+							<span class="like-icon"></span>
+						</div>
+						<div class="star-rating" data-rating="2.0">
+							<div class="rating-counter">(17 reviews)</div>
+						</div>
+					</a>
+				</div>
+				<!-- Listing Item / End -->
+	
+				<!-- Listing Item -->
+				<div class="carousel-item">
+					<a href="listings-single-page.html" class="listing-item-container">
+						<div class="listing-item">
+							<img src="images/foto-negozio4.jpg" alt="">
+	
+							<div class="listing-badge now-open">Now Open</div>
+	
+							<div class="listing-item-content">
+								<span class="tag">Per la Casa</span>
+								<h3>Da Giulia<i class="verified-icon"></i></h3>
+								<span>Via dei mille, Napoli</span>
+							</div>
+							<span class="like-icon"></span>
+						</div>
+						<div class="star-rating" data-rating="5.0">
+							<div class="rating-counter">(31 reviews)</div>
+						</div>
+					</a>
+				</div>
+				<!-- Listing Item / End -->
+				
+			</div>
+	
+		</div>
+	</div>
+	</section>
+	
 
 <!-- Fullwidth Section -->
 <section class="fullwidth margin-top-65 padding-top-75 padding-bottom-70" data-background-color="#f8f8f8">
@@ -325,8 +436,7 @@
 		<div class="row">
 
 			<div class="col-md-12">
-				<h3 class="headline centered margin-bottom-45">
-					Most Visited Places
+				<h3 class="headline centered margin-bottom-45">Ultimi negozi inseriti
 					<span>Discover top-rated local businesses</span>
 				</h3>
 			</div>
@@ -338,14 +448,14 @@
 				<div class="carousel-item">
 					<a href="listings-single-page.html" class="listing-item-container">
 						<div class="listing-item">
-							<img src="images/listing-item-01.jpg" alt="">
+							<img src="images/negozio-inserito1.jpeg" alt="">
 
 							<div class="listing-badge now-open">Now Open</div>
 							
 							<div class="listing-item-content">
-								<span class="tag">Eat & Drink</span>
-								<h3>Tom's Restaurant <i class="verified-icon"></i></h3>
-								<span>964 School Street, New York</span>
+								<span class="tag">Alimentari</span>
+								<h3>Sfusi & Sfusi <i class="verified-icon"></i></h3>
+								<span>Via Roma, Padova</span>
 							</div>
 							<span class="like-icon"></span>
 						</div>
@@ -360,16 +470,16 @@
 				<div class="carousel-item">
 					<a href="listings-single-page.html" class="listing-item-container">
 						<div class="listing-item">
-							<img src="images/listing-item-02.jpg" alt="">
+							<img src="images/negozio-inserito2.jpeg" alt="">
 							<div class="listing-item-details">
 								<ul>
-									<li>Friday, August 10</li>
+									<li>Prodotti in offerta</li>
 								</ul>
 							</div>
 							<div class="listing-item-content">
-								<span class="tag">Events</span>
-								<h3>Sticky Band</h3>
-								<span>Bishop Avenue, New York</span>
+								<span class="tag">Erboristeria</span>
+								<h3>Le erbe magiche</h3>
+								<span>Corso Garibaldi, Roma</span>
 							</div>
 							<span class="like-icon"></span>
 						</div>
@@ -384,16 +494,16 @@
 				<div class="carousel-item">
 					<a href="listings-single-page.html" class="listing-item-container">
 						<div class="listing-item">
-							<img src="images/listing-item-03.jpg" alt="">
+							<img src="images/negozio-inserito3.JPEG" alt="">
 							<div class="listing-item-details">
 								<ul>
-									<li>Starting from $59 per night</li>
+									<li>Prodotti in offerta</li>
 								</ul>
 							</div>
 							<div class="listing-item-content">
-								<span class="tag">Hotels</span>
-								<h3>Hotel Govendor</h3>
-								<span>778 Country Street, New York</span>
+								<span class="tag">Animali</span>
+								<h3>Dog & Cat</h3>
+								<span>Via Roma, Pavia</span>
 							</div>
 							<span class="like-icon"></span>
 						</div>
@@ -413,9 +523,9 @@
 							<div class="listing-badge now-open">Now Open</div>
 
 							<div class="listing-item-content">
-								<span class="tag">Eat & Drink</span>
-								<h3>Burger House <i class="verified-icon"></i></h3>
-								<span>2726 Shinn Street, New York</span>
+								<span class="tag">Per la casa</span>
+								<h3>Casa e non solo<i class="verified-icon"></i></h3>
+								<span>Via Santa Giulia, Torino</span>
 							</div>
 							<span class="like-icon"></span>
 						</div>
@@ -425,48 +535,6 @@
 					</a>
 				</div>
 				<!-- Listing Item / End -->
-
-				<!-- Listing Item -->
-				<div class="carousel-item">
-					<a href="listings-single-page.html" class="listing-item-container">
-						<div class="listing-item">
-							<img src="images/listing-item-05.jpg" alt="">
-							<div class="listing-item-content">
-								<span class="tag">Other</span>
-								<h3>Airport</h3>
-								<span>1512 Duncan Avenue, New York</span>
-							</div>
-							<span class="like-icon"></span>
-						</div>
-						<div class="star-rating" data-rating="3.5">
-							<div class="rating-counter">(46 reviews)</div>
-						</div>
-					</a>
-				</div>
-				<!-- Listing Item / End -->
-
-				<!-- Listing Item -->
-				<div class="carousel-item">
-					<a href="listings-single-page.html" class="listing-item-container">
-						<div class="listing-item">
-							<img src="images/listing-item-06.jpg" alt="">
-
-							<div class="listing-badge now-closed">Now Closed</div>
-
-							<div class="listing-item-content">
-								<span class="tag">Eat & Drink</span>
-								<h3>Think Coffee</h3>
-								<span>215 Terry Lane, New York</span>
-							</div>
-							<span class="like-icon"></span>
-						</div>
-						<div class="star-rating" data-rating="4.5">
-							<div class="rating-counter">(15 reviews)</div>
-						</div>
-					</a>
-				</div>
-				<!-- Listing Item / End -->
-				</div>
 				
 			</div>
 
@@ -475,7 +543,6 @@
 
 </section>
 <!-- Fullwidth Section / End -->
-
 
 <!-- Info Section -->
 <div class="container">
