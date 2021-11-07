@@ -25,7 +25,7 @@ if(document.getElementById("map") !== null){
 	function locationData(locationURL,locationImg,locationTitle, locationAddress, locationRating, locationRatingCounter) {
 	  return(''+
 	    '<a href="'+ locationURL +'" class="leaflet-listing-img-container">'+
-	       '<div class="infoBox-close"><i class="fa fa-times"></i></div>'+
+	       '<div class="infoBox-close"><i class="fa fa-info"></i></div>'+
 	       '<img src="'+locationImg+'" alt="">'+
 
 	       '<div class="leaflet-listing-item-content">'+
@@ -259,7 +259,7 @@ function singleListingMap() {
 		shadowAnchor: [4, 62],  // the same for the shadow
 		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 	});
-	
+
 	var listeoIcon = L.divIcon({
 	    iconAnchor: [20, 51], // point of the icon which will correspond to marker's location
 	    popupAnchor: [0, -51],
