@@ -60,7 +60,7 @@ if(document.getElementById("map") !== null){
 	// Locations
 	// ----------------------------------------------- //
 	var locations = [
-		[ locationData('listings-single-page.html','images/foto-negozio1.jpg',"I Tulipani Bio Shop",'Via della Stazione di Ottavia, 73/F/G, 00135, Roma','3.5', '12' ), 41.96383633503931, 12.405505311644568,1, '<i class="im im-icon"></i>'],
+		[ locationData('listings-single-page.html','images/foto-negozio1.jpg',"I Tulipani Bio Shop",'Via della Stazione di Ottavia, 73/F/G, 00135, Roma','3.5', '12' ), 41.96383633503931, 12.405505311644568,1, '<i class="im im-icon-User"></i>'],
 		[ locationData('listings-single-page.html','images/photos/sancosimo/sancosma.jpg',"Biologico - Box 44 Mercato Italia",'Via Catania, 70, 00161, Roma','3.5', '46'), 41.90933069999999, 12.519221699999997, 2, '<i class="im im-icon"></i>'],
 		[ locationData('listings-single-page.html','images/photos/',"Biomens",'Viale delle Milizie, 7A, Roma','5', '46'), 41.91088704515757, 12.45776868764405, 3, '<i class="im im-icon"></i>'],
 		[ locationData('listings-single-page.html','images/foto-negozio3.jpg',"Bottega Biocé",'Via Erasmo Gattamelata, 129, 00176 Roma','5', '46'), 41.88706540000003, 12.53667479999999, 3, '<i class="im im-icon"></i>'],
@@ -166,7 +166,17 @@ if(document.getElementById("map") !== null){
        
         for (var i = 0; i < locations.length; i++) {
 
-          var listeoIcon = L.divIcon({
+			var greenIcon = L.icon({
+				iconUrl: 'favicon.png',
+				shadowUrl: '',
+			
+				iconSize:     [50, 65], // size of the icon
+				iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+				shadowAnchor: [4, 62],  // the same for the shadow
+				popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+			});
+
+			var listeoIcon = L.divIcon({
               iconAnchor: [20, 51], // point of the icon which will correspond to marker's location
               popupAnchor: [0, -51],
               className: 'listeo-marker-icon',
@@ -187,7 +197,7 @@ if(document.getElementById("map") !== null){
               }
                 var markerArray = [];
             marker = new L.marker([locations[i][1],locations[i][2]], {
-                icon: listeoIcon,
+                icon: greenIcon,
                 
               })
               .bindPopup(locations[i][0],popupOptions );
@@ -199,7 +209,6 @@ if(document.getElementById("map") !== null){
               map.on('popupopen', function (e) {
               //   L.DomUtil.addClass(e.popup._source._icon, 'clicked');
             
-
               // }).on('popupclose', function (e) {
               //   if(e.popup){
               //     L.DomUtil.removeClass(e.popup._source._icon, 'clicked');  
@@ -240,7 +249,17 @@ function singleListingMap() {
 	var lng = parseFloat($( '#singleListingMap' ).data('longitude'));
 	var lat =  parseFloat($( '#singleListingMap' ).data('latitude'));
 	var singleMapIco =  "<i class='"+$('#singleListingMap').data('map-icon')+"'></i>";
-
+	
+	var greenIcon = L.icon({
+		iconUrl: 'favicon.png',
+		shadowUrl: '',
+	
+		iconSize:     [50, 65], // size of the icon
+		iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+		shadowAnchor: [4, 62],  // the same for the shadow
+		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+	
 	var listeoIcon = L.divIcon({
 	    iconAnchor: [20, 51], // point of the icon which will correspond to marker's location
 	    popupAnchor: [0, -51],
@@ -276,7 +295,7 @@ function singleListingMap() {
 	map_single.scrollWheelZoom.disable();
 
 	marker = new L.marker([lat,lng], {
-	      icon: listeoIcon,
+	      icon: greenIcon,
 	}).addTo(map_single);
 
 	// Open Street Map 
