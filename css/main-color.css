@@ -123,6 +123,8 @@ input:checked + .slider,
 #sign-in-dialog .mfp-close:hover,
 #small-dialog .mfp-close:hover {
     background-color: #FCCE00;
+    color: #006e62;
+    border-color: #FCCE00;
 }
 
 
@@ -174,15 +176,16 @@ span.blog-item-tag ,
 .sidebar-textbox ul.contact-details li a { color: #006e62; }
 
 a.button.border {
-    color: #006e62;
+    color: #FCCE00;
     border-color: #006e62;
+    background:#006e62 ;
 }
 
 .trigger.active a,
 .ui-accordion .ui-accordion-header-active:hover,
 .ui-accordion .ui-accordion-header-active {
     background-color: #006e62;
-    border-color: #006e62;
+    border-color: #06e62;
 }
 
 .numbered.color ol > li::before {

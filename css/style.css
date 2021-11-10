@@ -1785,7 +1785,7 @@ em.mm-counter+a.mm-fullsubopen+span {
 
 	.header-widget a.button.border {
 		padding: 7px 16px;
-		background-color: transparent;
+		background-color: #006e62;
 		font-size: 16px;
 		min-width: auto;
 		float: right;
@@ -17574,7 +17574,7 @@ body .category-box-btn:hover {
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media (max-width: 991px) {
 
-	.main-search-container { height: 580px; }
+	.main-search-container { height: 650px; }
 
 	.main-search-input select,
 	.main-search-input select:focus {
