@@ -6,12 +6,164 @@
 <title>Sfusitalia</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+<link rel="shortcut icon" type="image/ico" href="http://example.com/favicon.ico"/>
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/main-color.css" id="colors">
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Prodotti - Categoria 1');
+      data.addColumn('number', 'Prodotti - Categoria 2');
+      data.addColumn('number', 'Prodotti - Categoria 3');
+
+      data.addRows([
+        [1,  37.8, 80.8, 41.8],
+        [2,  30.9, 69.5, 32.4],
+        [3,  25.4,   57, 25.7],
+        [4,  11.7, 18.8, 10.5],
+        [5,  11.9, 17.6, 10.4],
+        [6,   8.8, 13.6,  7.7],
+        [7,   7.6, 12.3,  9.6],
+        [8,  12.3, 29.2, 10.6],
+        [9,  16.9, 42.9, 14.8],
+        [10, 12.8, 30.9, 11.6],
+        [11,  5.3,  7.9,  4.7],
+        [12,  6.6,  8.4,  5.2],
+        [13,  4.8,  6.3,  3.6],
+        [14,  4.2,  6.2,  3.4]
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Entrate',
+          subtitle: 'In Euro'
+        },
+        width: 900,
+        height: 500,
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+	</script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+	var data = google.visualization.arrayToDataTable([
+	  ['Year', 'Sales', 'Expenses', 'Profit'],
+	  ['2014', 1000, 400, 200],
+	  ['2015', 1170, 460, 250],
+	  ['2016', 660, 1120, 300],
+	  ['2017', 1030, 540, 350]
+	]);
+
+	var options = {
+	  chart: {
+		title: 'Andamento Negozio',
+		subtitle: 'Vendite, Costi, and Profitti: 2020-2021',
+	  }
+	};
+
+	var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+	chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+</script>
+<script type="text/javascript">
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawChart);
+
+	function drawChart() {
+
+	  var data = google.visualization.arrayToDataTable([
+		['Prodotti', 'Venduti'],
+		['Alimento 1',     11],
+		['Alimento 2',      2],
+		['Alimento 3',  2],
+		['Alimento 4', 2],
+		['Alimento 5',    7]
+	  ]);
+
+	  var options = {
+	  chart: {
+		title: 'Prodotti Venduti',
+		subtitle: 'Prodotti maggiormente venduti: 2020-2021',
+	  }
+	};
+
+	  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+	}
+  </script>
+   <script type="text/javascript">
+	google.charts.load('current', {'packages':['table']});
+	google.charts.setOnLoadCallback(drawTable);
+
+	function drawTable() {
+	  var data = new google.visualization.DataTable();
+	  data.addColumn('string', 'N. Ordine');
+	  data.addColumn('number', 'Saldo');
+	  data.addColumn('boolean', 'Pagato');
+	  data.addRows([
+		['Pre-Ordine 1',  {v: 100, f: '€ 100'}, true],
+		['Pre-Ordine 2',  {v: 300, f: '€ 300'}, true],
+		['Pre-Ordine 3',  {v: 10000, f: '€ 120'}, true],
+		['Pre-Ordine 4',  {v: 10000, f: '€ 140'}, true],
+		['Pre-Ordine 5',  {v: 10000, f: '€ 160'}, true],
+		['Pre-Ordine 6',  {v: 10000, f: '€ 20'}, true],
+		['Pre-Ordine 7',  {v: 10000, f: '€ 30'}, true],
+		['Pre-Ordine 8',  {v: 10000, f: '€ 400'}, true],
+		['Pre-Ordine 9',  {v: 10000, f: '€ 120'}, true],
+		['Pre-Ordine 10',  {v: 10000, f: '€ 130'}, true],
+		['Pre-Ordine 11',  {v: 10000, f: '€ 20'}, true],
+		['Pre-Ordine 12',  {v: 10000, f: '€ 30'}, true],
+		['Pre-Ordine 13',  {v: 10000, f: '€ 400'}, true],
+		['Pre-Ordine 14',  {v: 10000, f: '€ 120'}, true],
+		['Pre-Ordine 15',  {v: 10000, f: '€ 130'}, true],
+		['Pre-Ordine 16',  {v: 10000, f: '€ 20'}, true],
+		['Pre-Ordine 17',  {v: 10000, f: '€ 30'}, true],
+		['Pre-Ordine 18',  {v: 10000, f: '€ 400'}, true],
+		['Pre-Ordine 19',  {v: 10000, f: '€ 120'}, true],
+		['Pre-Ordine 20',  {v: 10000, f: '€ 130'}, true],
+		['Pre-Ordine 21',  {v: 10000, f: '€ 20'}, true],
+		['Pre-Ordine 22',  {v: 10000, f: '€ 30'}, true],
+		['Pre-Ordine 23',  {v: 10000, f: '€ 400'}, true],
+		['Pre-Ordine 24',  {v: 10000, f: '€ 120'}, true],
+		['Pre-Ordine 25',  {v: 10000, f: '€ 130'}, true],
+
+	]);
+	var options = {
+	  chart: {
+		title: 'Andamento Negozio',
+		subtitle: 'Vendite, Costi, and Profitti: 2020-2021',
+	  }
+	};
+
+
+	  var table = new google.visualization.Table(document.getElementById('table_div'));
+
+	  table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+
+	}
+  </script>
 </head>
 
 <body>
@@ -149,7 +301,7 @@
 
 	<!-- Responsive Navigation Trigger -->
 	<a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard Navigation</a>
-	
+
 	<div class="dashboard-nav">
 		<div class="dashboard-nav-inner">
 
@@ -192,7 +344,7 @@
 			
 		</div>
 	</div>
-<!-- Navigation / End -->
+	<!-- Navigation / End -->
 
 
 	<!-- Content
@@ -203,186 +355,41 @@
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Bookings</h2>
+					<h2>Ordini</h2>
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="#">Dashboard</a></li>
-							<li>Bookings</li>
+							<li>Ordini</li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 
+		<!-- Notice
 		<div class="row">
-			
-			<!-- Listings -->
-			<div class="col-lg-12 col-md-12">
-				<div class="dashboard-list-box margin-top-0">
-					
-					<!-- Booking Requests Filters  -->
-					<div class="booking-requests-filter">
-
-						<!-- Sort by -->
-						<div class="sort-by">
-							<div class="sort-by-select">
-								<select data-placeholder="Default order" class="chosen-select-no-single">
-									<option>All Listings</option>	
-									<option>Burger House</option>
-									<option>Tom's Restaurant</option>
-									<option>Hotel Govendor</option>
-								</select>
-							</div>
-						</div>
-
-						<!-- Date Range -->
-						<div id="booking-date-range">
-						    <span></span>
-						</div>
-					</div>
-
-					<!-- Reply to review popup -->
-					<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-						<div class="small-dialog-header">
-							<h3>Send Message</h3>
-						</div>
-						<div class="message-reply margin-top-0">
-							<textarea cols="40" rows="3" placeholder="Your Message to Kathy"></textarea>
-							<button class="button">Send</button>
-						</div>
-					</div>
-
-					<h4>Booking Requests</h4>
-					<ul>
-
-						<li class="pending-booking">
-							<div class="list-box-listing bookings">
-								<div class="list-box-listing-img"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=120" alt=""></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Sunny and Modern Apartment <span class="booking-status pending">Pending</span><span class="booking-status unpaid">Unpaid</span></h3>
-
-										<div class="inner-booking-list">
-											<h5>Booking Date:</h5>
-											<ul class="booking-list">
-												<li class="highlighted">20.08.2018 - 24.08.2018</li>
-											</ul>
-										</div>
-													
-										<div class="inner-booking-list">
-											<h5>Booking Details:</h5>
-											<ul class="booking-list">
-												<li class="highlighted">2 Adults</li>
-											</ul>
-										</div>		
-													
-										<div class="inner-booking-list">
-											<h5>Price:</h5>
-											<ul class="booking-list">
-												<li class="highlighted">$147</li>
-											</ul>
-										</div>		
-
-										<div class="inner-booking-list">
-											<h5>Client:</h5>
-											<ul class="booking-list">
-												<li>John Smith</li>
-												<li>john@example.com</li>
-												<li>123-456-789</li>
-											</ul>
-										</div>
-
-										<a href="#small-dialog" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-envelope-open"></i> Send Message</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray reject"><i class="sl sl-icon-close"></i> Reject</a>
-								<a href="#" class="button gray approve"><i class="sl sl-icon-check"></i> Approve</a>
-							</div>
-						</li>
-
-						<li class="approved-booking">
-							<div class="list-box-listing bookings">
-								<div class="list-box-listing-img"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=120" alt=""></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Burger House <span class="booking-status">Approved</span></h3>
-
-										<div class="inner-booking-list">
-											<h5>Booking Date:</h5>
-											<ul class="booking-list">
-												<li class="highlighted">10.12.2019 at 12:30 pm - 13:30 pm</li>
-											</ul>
-										</div>
-													
-										<div class="inner-booking-list">
-											<h5>Booking Details:</h5>
-											<ul class="booking-list">
-												<li class="highlighted">2 Adults, 2 Children</li>
-											</ul>
-										</div>		
-
-										<div class="inner-booking-list">
-											<h5>Client:</h5>
-											<ul class="booking-list">
-												<li>Kathy Brown</li>
-												<li>kathy@example.com</li>
-												<li>123-456-789</li>
-											</ul>
-										</div>
-
-										<a href="#small-dialog" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-envelope-open"></i> Send Message</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray reject"><i class="sl sl-icon-close"></i> Cancel</a>
-							</div>
-						</li>
-
-						<li class="canceled-booking">
-							<div class="list-box-listing bookings">
-								<div class="list-box-listing-img"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=120" alt=""></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Tom's Restaurant <span class="booking-status">Canceled</span></h3>
-
-										<div class="inner-booking-list">
-											<h5>Booking Date:</h5>
-											<ul class="booking-list">
-												<li class="highlighted">21.10.2019 at 9:30 am - 10:30 am</li>
-											</ul>
-										</div>
-													
-										<div class="inner-booking-list">
-											<h5>Booking Details:</h5>
-											<ul class="booking-list">
-												<li class="highlighted">2 Adults</li>
-											</ul>
-										</div>		
-
-										<div class="inner-booking-list">
-											<h5>Client:</h5>
-											<ul class="booking-list">
-												<li>Kathy Brown</li>
-												<li>kathy@example.com</li>
-												<li>123-456-789</li>
-											</ul>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						
-					</ul>
+			<div class="col-md-12">
+				<div class="notification success closeable margin-bottom-30">
+					<p>Your listing <strong>Hotel Govendor</strong> has been approved!</p>
+					<a class="close" href="#"></a>
 				</div>
 			</div>
+		</div>
+		 end - Notice -->
+
+		
+				<div class="row" >
+					<!-- Recent Activity -->
+					<div class="col-lg-12 col-sm-6 col-xs-12">
+						<div class="dashboard-list-box with-icons margin-top-20">
+							<div id="table_div"></div>
+			
+						</div>
+					</div>
+					</div>
+		
+				
 
 
 			<!-- Copyrights -->
@@ -417,51 +424,6 @@
 <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="scripts/tooltips.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-
-<!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
-<script src="scripts/moment.min.js"></script>
-<script src="scripts/daterangepicker.js"></script>
-
-<script>
-$(function() {
-
-    var start = moment().subtract(29, 'days');
-    var end = moment();
-
-    function cb(start, end) {
-        $('#booking-date-range span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-    }
-    cb(start, end);
-    $('#booking-date-range').daterangepicker({
-    	"opens": "left",
-	    "autoUpdateInput": false,
-	    "alwaysShowCalendars": true,
-        startDate: start,
-        endDate: end,
-        ranges: {
-           'Today': [moment(), moment()],
-           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-           'This Month': [moment().startOf('month'), moment().endOf('month')],
-           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-    }, cb);
-
-    cb(start, end);
-
-});
-
-// Calendar animation and visual settings
-$('#booking-date-range').on('show.daterangepicker', function(ev, picker) {
-	$('.daterangepicker').addClass('calendar-visible calendar-animated bordered-style');
-	$('.daterangepicker').removeClass('calendar-hidden');
-});
-$('#booking-date-range').on('hide.daterangepicker', function(ev, picker) {
-	$('.daterangepicker').removeClass('calendar-visible');
-	$('.daterangepicker').addClass('calendar-hidden');
-});
-</script>
 
 
 </body>

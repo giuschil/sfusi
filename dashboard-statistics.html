@@ -6,12 +6,149 @@
 <title>Sfusitalia</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+<link rel="shortcut icon" type="image/ico" href="http://example.com/favicon.ico"/>
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/main-color.css" id="colors">
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Prodotti - Categoria 1');
+      data.addColumn('number', 'Prodotti - Categoria 2');
+      data.addColumn('number', 'Prodotti - Categoria 3');
+
+      data.addRows([
+        [1,  37.8, 80.8, 41.8],
+        [2,  30.9, 69.5, 32.4],
+        [3,  25.4,   57, 25.7],
+        [4,  11.7, 18.8, 10.5],
+        [5,  11.9, 17.6, 10.4],
+        [6,   8.8, 13.6,  7.7],
+        [7,   7.6, 12.3,  9.6],
+        [8,  12.3, 29.2, 10.6],
+        [9,  16.9, 42.9, 14.8],
+        [10, 12.8, 30.9, 11.6],
+        [11,  5.3,  7.9,  4.7],
+        [12,  6.6,  8.4,  5.2],
+        [13,  4.8,  6.3,  3.6],
+        [14,  4.2,  6.2,  3.4]
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Entrate',
+          subtitle: 'In Euro'
+        },
+        width: 900,
+        height: 500,
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+	</script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+	var data = google.visualization.arrayToDataTable([
+	  ['Year', 'Sales', 'Expenses', 'Profit'],
+	  ['2014', 1000, 400, 200],
+	  ['2015', 1170, 460, 250],
+	  ['2016', 660, 1120, 300],
+	  ['2017', 1030, 540, 350]
+	]);
+
+	var options = {
+	  chart: {
+		title: 'Andamento Negozio',
+		subtitle: 'Vendite, Costi, and Profitti: 2020-2021',
+	  }
+	};
+
+	var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+	chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+</script>
+<script type="text/javascript">
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawChart);
+
+	function drawChart() {
+
+	  var data = google.visualization.arrayToDataTable([
+		['Prodotti', 'Venduti'],
+		['Alimento 1',     11],
+		['Alimento 2',      2],
+		['Alimento 3',  2],
+		['Alimento 4', 2],
+		['Alimento 5',    7]
+	  ]);
+
+	  var options = {
+	  chart: {
+		title: 'Prodotti Venduti',
+		subtitle: 'Prodotti maggiormente venduti: 2020-2021',
+	  }
+	};
+
+	  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+	}
+  </script>
+   <script type="text/javascript">
+	google.charts.load('current', {'packages':['table']});
+	google.charts.setOnLoadCallback(drawTable);
+
+	function drawTable() {
+	  var data = new google.visualization.DataTable();
+	  data.addColumn('string', 'N. Ordine');
+	  data.addColumn('number', 'Saldo');
+	  data.addColumn('boolean', 'Pagato');
+	  data.addRows([
+		['Pre-Ordine 1',  {v: 100, f: '€ 100'}, true],
+		['Pre-Ordine 2',  {v: 300, f: '€ 300'}, true],
+		['Pre-Ordine 3',  {v: 10000, f: '€ 120'}, true],
+		['Pre-Ordine 4',  {v: 10000, f: '€ 140'}, true],
+		['Pre-Ordine 5',  {v: 10000, f: '€ 160'}, true],
+		['Pre-Ordine 6',  {v: 10000, f: '€ 20'}, true],
+		['Pre-Ordine 7',  {v: 10000, f: '€ 30'}, true],
+		['Pre-Ordine 8',  {v: 10000, f: '€ 400'}, true],
+		['Pre-Ordine 9',  {v: 10000, f: '€ 120'}, true],
+		['Pre-Ordine 10',  {v: 10000, f: '€ 130'}, true],
+
+	]);
+	var options = {
+	  chart: {
+		title: 'Andamento Negozio',
+		subtitle: 'Vendite, Costi, and Profitti: 2020-2021',
+	  }
+	};
+
+
+	  var table = new google.visualization.Table(document.getElementById('table_div'));
+
+	  table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+
+	}
+  </script>
 </head>
 
 <body>
@@ -33,7 +170,7 @@
 				<!-- Logo -->
 				<div id="logo">
 					<a href="index.html"><img src="images/logo.png" alt=""></a>
-					<a href="index.html" class="dashboard-logo"><img src="images/logo2.png" alt=""></a>
+					<a href="index.html" class="dashboard-logo"><img src="images/logo.png" alt=""></a>
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -44,64 +181,15 @@
 						</span>
 					</button>
 				</div>
+				 <!-- End Mobile Navigation -->
 
-				<!-- Main Navigation -->
+				<!-- Main Navigation 
 				<nav id="navigation" class="style-1">
 					<ul id="responsive">
 
-						<li><a href="#">Home</a>
-							<ul>
-								<li><a href="index.html">Home 1</a></li>
-								<li><a href="index-2-airbnb.html">Home 2 (Airbnb)</a></li>
-								<li><a href="index-3.html">Home 3</a></li>
-								<li><a href="index-4.html">Home 4</a></li>
-								<li><a href="index-5.html">Home 5</a></li>
-								<li><a href="index-6.html">Home 6</a></li>
-							</ul>
-						</li>
-
+						<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a>
+							</li>
 						<li><a href="#">Listings</a>
-							<ul>
-								<li><a href="#">List Layout</a>
-									<ul>
-										<li><a href="listings-list-with-sidebar.html">With Sidebar</a></li>
-										<li><a href="listings-list-full-width.html">Full Width</a></li>
-										<li><a href="listings-list-full-width-with-map.html">Full Width + Map</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Grid Layout</a>
-									<ul>
-										<li><a href="listings-grid-with-sidebar-1.html">With Sidebar 1</a></li>
-										<li><a href="listings-grid-with-sidebar-2.html">With Sidebar 2</a></li>
-										<li><a href="listings-grid-full-width.html">Full Width</a></li>
-										<li><a href="listings-grid-full-width-with-map.html">Full Width + Map</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Half Screen Map</a>
-									<ul>
-										<li><a href="listings-half-screen-map-list.html">List Layout</a></li>
-										<li><a href="listings-half-screen-map-grid-1.html">Grid Layout 1</a></li>
-										<li><a href="listings-half-screen-map-grid-2.html">Grid Layout 2</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Single Listings</a>
-									<ul>
-										<li><a href="listings-single-page.html">Single Listing 1</a></li>
-										<li><a href="listings-single-page-2.html">Single Listing 2</a></li>
-										<li><a href="listings-single-page-3.html">Single Listing 3</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Open Street Map</a>
-									<ul>
-										<li><a href="listings-half-screen-map-list-OpenStreetMap.html">Half Screen Map List Layout</a></li>
-										<li><a href="listings-half-screen-map-grid-1-OpenStreetMap.html">Half Screen Map Grid Layout 1</a></li>
-										<li><a href="listings-half-screen-map-grid-2-OpenStreetMap.html">Half Screen Map Grid Layout 2</a></li>
-										<li><a href="listings-list-full-width-with-map-OpenStreetMap.html">Full Width List</a></li>
-										<li><a href="listings-grid-full-width-with-map-OpenStreetMap.html">Full Width Grid</a></li>
-										<li><a href="listings-single-page-OpenStreetMap.html">Single Listing</a></li>
-									</ul>
-								</li>
-							</ul>
 						</li>
 
 						<li><a class="current" href="#">User Panel</a>
@@ -158,7 +246,7 @@
 					</ul>
 				</nav>
 				<div class="clearfix"></div>
-				<!-- Main Navigation / End -->
+				 Main Navigation / End -->
 				
 			</div>
 			<!-- Left Side Content / End -->
@@ -170,21 +258,17 @@
 					
 					<!-- User Menu -->
 					<div class="user-menu">
-						<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span>Hi, Tom!</div>
+						<div class="user-name"><span><img src="images/foto-woman.jpg" alt=""></span>Account</div>
 						<ul>
 							<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
-							<li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a></li>
-							<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
-							<li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
+							<li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messaggi</a></li>
+							<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Notifiche</a></li>
+							<li><a href="index.html"><i class="sl sl-icon-power"></i> Esci</a></li>
 						</ul>
 					</div>
-
-					<a href="dashboard-add-listing.html" class="button border with-icon">Add Listing <i class="sl sl-icon-plus"></i></a>
-				</div>
-				<!-- Header Widget / End -->
+			</div>				<!-- Header Widget / End -->
 			</div>
 			<!-- Right Side Content / End -->
-
 		</div>
 	</div>
 	<!-- Header / End -->
@@ -202,7 +286,7 @@
 
 	<!-- Responsive Navigation Trigger -->
 	<a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard Navigation</a>
-	
+
 	<div class="dashboard-nav">
 		<div class="dashboard-nav-inner">
 
@@ -256,144 +340,87 @@
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>My Listings</h2>
+					<h2>Statistiche Negozio</h2>
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="#">Dashboard</a></li>
-							<li>My Listings</li>
+							<li>Statistiche</li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 
+		<!-- Notice
 		<div class="row">
-			
-			<!-- Listings -->
-			<div class="col-lg-12 col-md-12">
-				<div class="dashboard-list-box margin-top-0">
-					<h4>Active Listings</h4>
-					<ul>
-
-						<li>
-							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="#"><img src="images/listing-item-01.jpg" alt=""></a></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3><a href="#">Tom's Restaurant</a></h3>
-										<span>964 School Street, New York</span>
-										<div class="star-rating" data-rating="3.5">
-											<div class="rating-counter">(12 reviews)</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray"><i class="sl sl-icon-note"></i> Edit</a>
-								<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a>
-							</div>
-						</li>
-
-						<li>
-							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="#"><img src="images/listing-item-02.jpg" alt=""></a></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Sticky Band</h3>
-										<span>Bishop Avenue, New York</span>
-										<div class="star-rating" data-rating="5.0">
-											<div class="rating-counter">(23 reviews)</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray"><i class="sl sl-icon-note"></i> Edit</a>
-								<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a>
-							</div>
-						</li>
-						
-						<li>
-							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="#"><img src="images/listing-item-03.jpg" alt=""></a></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Hotel Govendor</h3>
-										<span>778 Country Street, New York</span>
-										<div class="star-rating" data-rating="2.0">
-											<div class="rating-counter">(17 reviews)</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray"><i class="sl sl-icon-note"></i> Edit</a>
-								<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a>
-							</div>
-						</li>
-
-						<li>
-							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="#"><img src="images/listing-item-04.jpg" alt=""></a></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Burger House</h3>
-										<span>2726 Shinn Street, New York</span>
-										<div class="star-rating" data-rating="5.0">
-											<div class="rating-counter">(31 reviews)</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray"><i class="sl sl-icon-note"></i> Edit</a>
-								<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a>
-							</div>
-						</li>
-
-						<li>
-							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="#"><img src="images/listing-item-05.jpg" alt=""></a></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Airport</h3>
-										<span>1512 Duncan Avenue, New York</span>
-										<div class="star-rating" data-rating="3.5">
-											<div class="rating-counter">(46 reviews)</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray"><i class="sl sl-icon-note"></i> Edit</a>
-								<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a>
-							</div>
-						</li>
-
-						<li>
-							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="#"><img src="images/listing-item-06.jpg" alt=""></a></div>
-								<div class="list-box-listing-content">
-									<div class="inner">
-										<h3>Think Coffee</h3>
-										<span>215 Terry Lane, New York</span>
-										<div class="star-rating" data-rating="5.0">
-											<div class="rating-counter">(31 reviews)</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="buttons-to-right">
-								<a href="#" class="button gray"><i class="sl sl-icon-note"></i> Edit</a>
-								<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a>
-							</div>
-						</li>
-
-					</ul>
+			<div class="col-md-12">
+				<div class="notification success closeable margin-bottom-30">
+					<p>Your listing <strong>Hotel Govendor</strong> has been approved!</p>
+					<a class="close" href="#"></a>
 				</div>
 			</div>
+		</div>
+		 end - Notice -->
+
+		 <div class="row">
+
+			<!-- Item -->
+			<div class="col-xs-6 col-sm-3">
+				<div class="dashboard-stat color-1">
+					<div class="dashboard-stat-content"><h4>2340.00</h4> <span>Totale Venduto</span></div>
+					<div class="dashboard-stat-icon"><i class="im im-icon-Line-Chart"></i></div>
+				</div>
+			</div>
+
+			<!-- Item -->
+			<div class="col-xs-6 col-sm-3">
+				<div class="dashboard-stat color-3">
+					<div class="dashboard-stat-content"><h4>722</h4> <span>Totale Pre-Ordini</span></div>
+					<div class="dashboard-stat-icon"><i class="im im-icon-Shopping-Bag"></i></div>
+				</div>
+			</div>
+
+			
+			<!-- Item -->
+			<div class="col-xs-6 col-sm-3">
+				<div class="dashboard-stat color-2">
+					<div class="dashboard-stat-content"><h4>3305</h4> <span>Prodotti Venduti</span></div>
+					<div class="dashboard-stat-icon"><i class="im im-icon-Heart"></i></div>
+				</div>
+			</div>
+
+			<!-- Item -->
+			<div class="col-xs-6 col-sm-3">
+				<div class="dashboard-stat color-1">
+					<div class="dashboard-stat-content"><h4>1240.00</h4> Saldo <span></span></div>
+					<div class="dashboard-stat-icon"><i class="im im-icon-Box-withFolders"></i></div>
+				</div>
+			</div>
+		</div>
+
+
+			<div class="row" >
+			<!-- Recent Activity -->
+			<div class="col-lg-12 col-sm-12 col-xs-12">
+				<div class="dashboard-list-box with-icons margin-top-20">
+					<div id="columnchart_material"></div>
+	
+				</div>
+			</div>
+			</div>
+		
+				<div class="row" >
+					<!-- Recent Activity -->
+					<div class="col-lg-12 col-sm-6 col-xs-12">
+						<div class="dashboard-list-box with-icons margin-top-20">
+							<div id="table_div"></div>
+			
+						</div>
+					</div>
+					</div>
+		
+				
 
 
 			<!-- Copyrights -->
