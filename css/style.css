@@ -7584,7 +7584,7 @@ a.rate-review:hover {
 	position: absolute;
 	z-index: 10;
 	content: "";
-	background-color: rgba(26,26,26,0.92)
+	background-color: rgba(26,26,26,0.43)
 }
 
 .coming-soon-page h2,
